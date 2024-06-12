@@ -4,7 +4,7 @@ import pg from "pg";
     user:"postgres",
     host:"localhost",
     database:"blog",
-    password:"Venugopal7@",
+    password:"your_password",
     port:5432,
   });
   
