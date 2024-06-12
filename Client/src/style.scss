@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+}
+
+$lightOrange: #CAF4FF;
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+
+        width: 1024px;
+
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //Login
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightOrange;
+
+            h1 {
+                font-size: 25px;
+                color: #3298f1;
+                margin-bottom: 20px;
+
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                background-color: white;
+                width: 200px;
+                gap: 20px;
+
+
+                input {
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid gray;
+                }
+
+                button {
+                    padding: 10px;
+                    border: none;
+                    background-color: #3298f1;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                p {
+                    font-size: 15px;
+                    color: red;
+                    text-align: center;
+                }
+
+                span {
+                    font-size: 15px;
+                    text-align: center;
+                }
+            }
+        }
+
+        //Navbar
+        .navbar {
+            .container {
+                padding: 10px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .logo {
+                    img {
+                        width: 70px;
+                    }
+                }
+
+                .links {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h6 {
+                        font-size: 20px;
+                        font-weight: 250;
+
+                    }
+
+                    span {
+                        cursor: pointer;
+                    }
+
+                    .write {
+                        background-color: $lightOrange;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 250;
+                        border: 1px solid #ffffff;
+
+                        &:hover {
+
+                            color: #3298f1;
+                            background-color: white;
+                            border: 1px solid #3298f1;
+                        }
+                    }
+                }
+            }
+        }
+
+        //Footer
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightOrange;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+
+            img {
+                height: 50px;
+            }
+        }
+
+        //Home
+
+        .home {
+
+            .posts {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 150px;
+            }
+
+            .post {
+                display: flex;
+                gap: 100px;
+
+                &:nth-child(2n+1) {
+                    flex-direction: row-reverse;
+                }
+
+                .img {
+                    flex: 2;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background-color: $lightOrange;
+                        position: absolute;
+                        top: 20px;
+                        left: -20px;
+                        z-index: -1;
+
+                    }
+
+                    img {
+                        width: 100%;
+                        max-height: 400px;
+                        object-fit: cover;
+                    }
+                }
+
+                .content {
+                    flex: 3;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+
+
+                    h1 {
+                        font-size: 30px;
+                        margin: 10px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+
+                    button {
+                        width: max-content;
+                        padding: 10px 20px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: white;
+                        border: 1px solid $lightOrange;
+                        color: #3298f1;
+
+                        &:hover {
+                            border: 1px solid white;
+                            background-color: $lightOrange;
+                            color: black;
+                        }
+                    }
+
+                }
+
+
+
+            }
+        }
+
+        //single
+
+        .single {
+            display: flex;
+            gap: 50px;
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+
+            }
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 14px;
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+
+                .edit {
+                    display: flex;
+                    gap: 5px;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                    }
+                }
+
+                h1 {
+                    font-size: 42px;
+                    color: #333;
+                }
+
+                p {
+                    text-align: justify;
+                    line-height: 30px;
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                h1 {
+                    font-size: 20px;
+                    color: #555;
+                }
+
+                .post {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+                    }
+
+                    h2 {
+                        color: #555;
+                    }
+
+                    button {
+                        width: max-content;
+                        padding: 7.5px 15px;
+                        border: none;
+                        cursor: pointer;
+                        background-color: white;
+                        border: 1px solid $lightOrange;
+                        color: #3298f1;
+
+                        &:hover {
+                            border: 1px solid white;
+                            background-color: $lightOrange;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        //write
+        .add {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+
+            .content {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                input {
+                    padding: 10px;
+                    border: 1px solid lightgray;
+                }
+
+                .editContainer {
+                    height: 300px;
+                    overflow: scroll;
+                    border: 1px solid lightgray;
+
+                    .editor {
+                        height: 100%;
+                        border: none;
+                    }
+                }
+
+                .editContainer::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            .menu {
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    border: 1px solid lightgray;
+                    padding: 10px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    color: #555;
+
+                    h1 {
+                        font-size: 20px;
+
+                    }
+
+                    .file {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        justify-content: space-between;
+
+                        :first-child {
+                            cursor: pointer;
+                            color: #3298f1;
+                            background-color: white;
+                            border: 1px solid #3298f1;
+                            padding: 3px 5px;
+                        }
+
+
+                        :last-child {
+                            cursor: pointer;
+                            color: white;
+                            background-color: #3298f1;
+                            border: 1px solid #3298f1;
+                            padding: 3px 5px;
+                        }
+                    }
+
+                    .cat{
+                        display: flex;
+                        
+                        align-items: center;
+                        gap: 5px;
+                        color: #3298f1;
+                    }
+                }
+            }
+        }
+    }
+}
